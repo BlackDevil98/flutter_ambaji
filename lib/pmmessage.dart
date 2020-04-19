@@ -6,7 +6,7 @@ class MessageScreen extends StatelessWidget{
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.arrow_back_ios,color:Colors.black),
+        centerTitle: true,
         title: Text("Chief Minister's Message",style: TextStyle(color:Colors.black),),
       ),
       resizeToAvoidBottomPadding: false,
