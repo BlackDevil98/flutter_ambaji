@@ -131,7 +131,9 @@ class BottomSheetClass extends StatelessWidget{
                   child:Column(
                     children:<Widget>[
 
-                IconButton(icon: Icon(Icons.font_download, color:Colors.black),onPressed: (){},),
+                IconButton(icon: Icon(Icons.font_download, color:Colors.black),onPressed: (){
+                  Navigator.pushNamed(context, '/fac');
+                },),
                 Text("Facilities",style:TextStyle(color: Colors.black,fontSize: 10),textAlign: TextAlign.center)
                     ]
                   ),
