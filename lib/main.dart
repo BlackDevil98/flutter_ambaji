@@ -1,3 +1,4 @@
+import 'package:ambaji/pmmessage.dart';
 import 'package:flutter/material.dart';
 //import 'package:google_sign_in/google_sign_in.dart';
 import 'home.dart';
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/' : (context) => LoginScreen(),
         '/home' : (context) => HomeScreen(),
+        '/message' : (context) => MessageScreen(),
       },
     );
   }

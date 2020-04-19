@@ -19,7 +19,9 @@ class BottomSheetClass extends StatelessWidget{
                     mainAxisSize: MainAxisSize.max,
                     children:<Widget>[
 
-                IconButton(icon: Icon(Icons.verified_user, color:Colors.black),onPressed: (){},),
+                IconButton(icon: Icon(Icons.verified_user, color:Colors.black),onPressed: () {
+                  Navigator.pushNamed(context, '/message');
+                },),
                 Text("Hon. Chief Minister’s",style:TextStyle(color: Colors.black,fontSize: 10,),textAlign: TextAlign.center,)
                     ]
                   ),
