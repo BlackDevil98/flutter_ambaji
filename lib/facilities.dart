@@ -73,26 +73,28 @@ class _CardView extends State<CardView>{
   }
 
   Widget myCard (BuildContext context, int index){
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        ListTile(
-          leading: Icon(Icons.album),
-          title: Text("${items[index].title}"),
-          subtitle: Text("${items[index].subtitle}"),
-        ),
-        ButtonBar(
-          children:<Widget>[
-            FlatButton(
-                child: const Text('Read More'),
-                onPressed: () { /* ... */ },
-              ),
-             
-          ]
-        )
-        
-        
-      ],
+    return Card(
+          child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.album),
+            title: Text("${items[index].title}"),
+            subtitle: Text("${items[index].subtitle}"),
+          ),
+          ButtonBar(
+            children:<Widget>[
+              FlatButton(
+                  child: const Text('Read More'),
+                  onPressed: () { /* ... */ },
+                ),
+               
+            ]
+          )
+          
+          
+        ],
+      ),
     );
   }
 
