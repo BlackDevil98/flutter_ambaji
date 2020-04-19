@@ -13,34 +13,8 @@ class FacilitiesScreen extends StatelessWidget{
         child: Padding(
           padding: const EdgeInsets.all(8.0),
            child: Container(
-             height: 500,
+             height: 1000,
              child: CardView()),
-    //Column(
-    //         children:<Widget>[
-    //           Center(
-    // child: Card(
-    //   child: Column(
-    //       mainAxisSize: MainAxisSize.min,
-    //       children: <Widget>[
-    //         const ListTile(
-    //           leading: Icon(Icons.album),
-    //           title: Text('The Enchanted Nightingale'),
-    //           subtitle: Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-    //         ),
-    //         ButtonBar(
-    //           children: <Widget>[
-    //             FlatButton(
-    //               child: const Text('BUY TICKETS'),
-    //               onPressed: () { /* ... */ },
-    //             ),
-    //             FlatButton(
-    //               child: const Text('LISTEN'),
-    //               onPressed: () { /* ... */ },
-    //             ),
-    //           ],
-    //         ),
-    //       ],
-    //   ),
     ),
   ),
     );
@@ -70,6 +44,9 @@ class _CardView extends State<CardView>{
   _CardView(){
     items.add(CardMag("Heya","Sometimes the primary action area of a card is the card itself. Cards can be one large touch target that shows a detail screen when tapped."));
     items.add(CardMag("Hello2","hello world2"));
+    items.add(CardMag("Hello2","hello world2"));
+    items.add(CardMag("Hello2","hello world2"));
+    items.add(CardMag("Hello2","hello world2"));
   }
 
   Widget myCard (BuildContext context, int index){
@@ -78,7 +55,7 @@ class _CardView extends State<CardView>{
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           ListTile(
-            leading: Icon(Icons.album),
+            leading: Icon(Icons.album,color: Colors.black,),
             title: Text("${items[index].title}"),
             subtitle: Text("${items[index].subtitle}"),
           ),
