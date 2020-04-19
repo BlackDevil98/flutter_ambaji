@@ -1,3 +1,4 @@
+import 'package:ambaji/bottomsheet.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,166 +7,178 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        leading: Icon(Icons.memory, color:Colors.black),
+        title: Text(
+          "Petrotic Yatra",
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
+        leading: IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.black,
+            ),
+            onPressed: () => showModalBottomSheet(
+                context: context, builder: (context) => BottomSheetClass()),
+          ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.power_settings_new,
+              color: Colors.black,
+            ),
+            onPressed: () => showModalBottomSheet(
+                context: context, builder: (context) => BottomSheetClass()),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
-                  child: Padding(
-            padding: const EdgeInsets.all(0.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Container(
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+        child: Padding(
+          padding: const EdgeInsets.all(0.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text("Welcome,",
+                            style: TextStyle(
+                                fontSize: 30,
+                                fontFamily: 'Raleway',
+                                fontWeight: FontWeight.w700)),
+                        Text("Ambaji Mandir",
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Raleway',
+                                fontWeight: FontWeight.w500)),
+                      ]),
+                ),
+              ),
+              Container(
+                height: 180,
+                child: StoryMode(),
+              ),
+
+              //F3AA63
+              
+              Padding(
+                padding: EdgeInsets.only(right: 20, left: 20),
+                child: Card(
+                  color: Color(0xffF3AA63),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const ListTile(
+                        title: Text('About & History of Ambaji Temple'),
+                        subtitle: Text(
+                            'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                      ),
+                      ButtonBar(
                         children: <Widget>[
-                          Text("Welcome,",
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontFamily: 'Raleway',
-                                  fontWeight: FontWeight.w700)),
-                          Text("Ambaji Mandir",
-                              style: TextStyle(
-                                  fontSize: 15,
-                                  fontFamily: 'Raleway',
-                                  fontWeight: FontWeight.w500)),
-                        ]),
-                  ),
-                ),
-                SizedBox(
-                  height: 25,
-                ),
-                Container(
-                  height: 180,
-                  child: StoryMode(),
-                ),
-
-                //F3AA63
-
-                Padding(
-                  padding: EdgeInsets.only(right:20,left: 20),
-                  child: Card(
-                    color: Color(0xffF3AA63),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        const ListTile(
-                          title: Text('About & History of Ambaji Temple'),
-                          subtitle: Text(
-                              'Music by Julie Gable. Lyrics by Sidney Stein.'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Know more', style: TextStyle(color:Colors.black),),
-                              onPressed: () {/* ... */},
+                          FlatButton(
+                            child: const Text(
+                              'Know more',
+                              style: TextStyle(color: Colors.black),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
+              ),
 
-                Padding(
-                  padding: EdgeInsets.only(right:20,left: 20),
-                  child: Card(
-                    color: Color(0xff6A58F5),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        const ListTile(
-                          title: Text('Live Aarti & Darshan'),
-                          subtitle: Text(
-                              'Music by Julie Gable. Lyrics by Sidney Stein.'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Know more', style: TextStyle(color:Colors.black),),
-                              onPressed: () {/* ... */},
+              Padding(
+                padding: EdgeInsets.only(right: 20, left: 20),
+                child: Card(
+                  color: Color(0xff6A58F5),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const ListTile(
+                        title: Text('Live Aarti & Darshan'),
+                        subtitle: Text(
+                            'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                      ),
+                      ButtonBar(
+                        children: <Widget>[
+                          FlatButton(
+                            child: const Text(
+                              'Know more',
+                              style: TextStyle(color: Colors.black),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
+              ),
 
-Padding(
-                  padding: EdgeInsets.only(right:20, left: 20),
-                  child: Card(
-                    color: Color(0xffED6B65),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        const ListTile(
-                          title: Text('Bhakti Player'),
-                          subtitle: Text(
-                              'Music by Julie Gable. Lyrics by Sidney Stein.'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Know more', style: TextStyle(color:Colors.black),),
-                              onPressed: () {/* ... */},
+              Padding(
+                padding: EdgeInsets.only(right: 20, left: 20),
+                child: Card(
+                  color: Color(0xffED6B65),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const ListTile(
+                        title: Text('Bhakti Player'),
+                        subtitle: Text(
+                            'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                      ),
+                      ButtonBar(
+                        children: <Widget>[
+                          FlatButton(
+                            child: const Text(
+                              'Know more',
+                              style: TextStyle(color: Colors.black),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
+              ),
 
-Padding(
-                  padding: EdgeInsets.only(right:20,left: 20),
-                  child: Card(
-                    color: Color(0xff5572F6),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        const ListTile(
-                          title: Text('Contact Us'),
-                          subtitle: Text(
-                              'Music by Julie Gable. Lyrics by Sidney Stein.'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Know more', style: TextStyle(color:Colors.black),),
-                              onPressed: () {/* ... */},
+              Padding(
+                padding: EdgeInsets.only(right: 20, left: 20),
+                child: Card(
+                  color: Color(0xff5572F6),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      const ListTile(
+                        title: Text('Contact Us'),
+                        subtitle: Text(
+                            'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                      ),
+                      ButtonBar(
+                        children: <Widget>[
+                          FlatButton(
+                            child: const Text(
+                              'Know more',
+                              style: TextStyle(color: Colors.black),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
+                            onPressed: () {/* ... */},
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
-
-
-
-                IconButton(
-                    icon: Icon(Icons.menu),
-                    onPressed: () {
-                      showModalBottomSheet(
-                          context: context,
-                          builder: (context) => Container(
-                                  child: Padding(
-                                padding: const EdgeInsets.all(20.0),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: <Widget>[
-                                    Column(children: <Widget>[])
-                                  ],
-                                ),
-                              )));
-                    })
-              ],
-            ),
+              ),
+            ],
           ),
         ),
+      ),
     );
   }
 }

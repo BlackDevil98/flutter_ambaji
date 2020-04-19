@@ -110,7 +110,7 @@ class _LoginScreen extends State<LoginScreen> {
                   style: TextStyle(color: Colors.white,fontFamily: 'Raleway',fontWeight: FontWeight.w400),
                 ),
                 SizedBox(
-                  height: 450,
+                  height: 380,
                 ),
                 RaisedButton(
                     onPressed: () {},
