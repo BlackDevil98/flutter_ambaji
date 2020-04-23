@@ -49,7 +49,9 @@ class BottomSheetClass extends StatelessWidget{
                   child:Column(
                     children:<Widget>[
 
-                IconButton(icon: Icon(Icons.feedback, color:Colors.black),onPressed: (){},),
+                IconButton(icon: Icon(Icons.feedback, color:Colors.black),onPressed: (){
+                  Navigator.pushNamed(context, '/feed');
+                },),
                 Text("Feedback",style:TextStyle(color: Colors.black,fontSize: 10),textAlign: TextAlign.center)
                     ]
                   ),
@@ -147,8 +149,10 @@ class BottomSheetClass extends StatelessWidget{
                   child:Column(
                     children:<Widget>[
 
-                IconButton(icon: Icon(Icons.text_fields, color:Colors.black),onPressed: (){},),
-                Text("Manta",style:TextStyle(color: Colors.black,fontSize: 10),textAlign: TextAlign.center)
+                IconButton(icon: Icon(Icons.text_fields, color:Colors.black),onPressed: (){
+                  Navigator.pushNamed(context, '/mantra');
+                },),
+                Text("Mantra",style:TextStyle(color: Colors.black,fontSize: 10),textAlign: TextAlign.center)
                     ]
                   ),
                 ),

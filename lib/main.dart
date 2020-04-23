@@ -3,6 +3,8 @@ import 'package:ambaji/pmmessage.dart';
 import 'package:flutter/material.dart';
 //import 'package:google_sign_in/google_sign_in.dart';
 import 'home.dart';
+import 'package:ambaji/feedback.dart';
+import 'package:ambaji/mantra.dart';
 
 
 void main() => runApp(MyApp());
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
         '/home' : (context) => HomeScreen(),
         '/message' : (context) => MessageScreen(),
         '/fac' : (context) => FacilitiesScreen(),
+        '/feed' : (context) => FeedbackScreen(),
+        '/mantra' : (context) => MantraScreen(),
       },
     );
   }

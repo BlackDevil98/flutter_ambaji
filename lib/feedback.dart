@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp()); 
-class MyApp extends StatelessWidget{
+void main() => runApp(FeedbackScreen()); 
+class FeedbackScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home:FormScreen(),
     );
   }
-
 }
-
 class FormScreen extends StatefulWidget{
   @override
   _FormScreen createState() => _FormScreen();
